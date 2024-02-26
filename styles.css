@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  width: min(120ch, 100% - 4rem);
+  margin-inline: auto;
+  place-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.arrangement {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 27%;
+  overflow-x: auto;
+
+  li {
+    aspect-ratio: 4 / 5;
+    display: grid;
+    margin-block-end: 3rem;
+
+    h3,
+    h4,
+    p {
+      text-wrap: balance;
+    }
+  }
+
+  img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}

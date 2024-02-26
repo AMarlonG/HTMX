@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMX Playground</title>
+    <script src="/htmx.min.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <h1>Bærum Jazzfestival</h1>
+    <h2>Program</h2>
+
+    <div>Finn ditt arrangement</div>
+    <input
+      type="search"
+      name="search"
+      placeholder="Søk arrangement her ..."
+      class="search"
+      hx-post="/search"
+      hx-trigger="input changed delay:500ms, search"
+      hx-target="#arrangement"
+    />
+
+    <ul class="arrangement" id="arrangement">
+      <li>
+        <img
+          src="https://source.unsplash.com/random?goldfish"
+          alt="Bilde fra unsplash"
+        />
+        <h3>Gullfisken lever</h3>
+        <span class="venue">Bærum Kulturhus</span>
+        <time datetime="08-20T20:00">20. aug – kl. 16:00</time>
+        <h4>Hva skjer når fisken husker mer enn den burde?</h4>
+        <details>
+          <summary>Les mer om konserten her</summary>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
+            incidunt deleniti dicta, dolores obcaecati error unde quisquam
+            dolorem ipsam veniam consequatur quae sequi recusandae at? Obcaecati
+            quae neque, libero maiores fugit incidunt pariatur consequatur aut.
+            Sit quae neque commodi blanditiis, pariatur aliquid voluptates.
+            Distinctio, repudiandae quae? Quam mollitia corporis rem.
+          </p>
+        </details>
+      </li>
+      <li>
+        <img
+          src="https://source.unsplash.com/random?inhale"
+          alt="Bilde fra unsplash"
+        />
+        <h3>Det siste åndedrag</h3>
+        <span class="venue">Sandvika Teater</span>
+        <time datetime="08-20T20:00">20. aug – kl. 18:00</time>
+        <h4>Når begynner og slutter livet?</h4>
+        <details>
+          <summary>Les mer om konserten her</summary>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
+            incidunt deleniti dicta, dolores obcaecati error unde quisquam
+            dolorem ipsam veniam consequatur quae sequi recusandae at? Obcaecati
+            quae neque, libero maiores fugit incidunt pariatur consequatur aut.
+            Sit quae neque commodi blanditiis, pariatur aliquid voluptates.
+            Distinctio, repudiandae quae? Quam mollitia corporis rem.
+          </p>
+        </details>
+      </li>
+      <li>
+        <img
+          src="https://source.unsplash.com/random?walking"
+          alt="Bilde fra unsplash"
+        />
+        <h3>Hvor enn vi går, vi går sammen</h3>
+        <span class="venue">Henie Onstad Kunstsenter</span>
+        <time datetime="08-20T20:00">20. aug – kl. 20:00</time>
+        <h4>Vi er alle sammen om reisens mål?</h4>
+        <details>
+          <summary>Les mer om konserten her</summary>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
+            incidunt deleniti dicta, dolores obcaecati error unde quisquam
+            dolorem ipsam veniam consequatur quae sequi recusandae at? Obcaecati
+            quae neque, libero maiores fugit incidunt pariatur consequatur aut.
+            Sit quae neque commodi blanditiis, pariatur aliquid voluptates.
+            Distinctio, repudiandae quae? Quam mollitia corporis rem.
+          </p>
+        </details>
+      </li>
+      <li>
+        <img
+          src="https://source.unsplash.com/random?snow"
+          alt="Bilde fra unsplash"
+        />
+        <h3>Hvor hvit er snøen om sommeren?</h3>
+        <span class="venue">Bærum Kulturhus</span>
+        <time datetime="08-20T20:00">21. aug – kl. 13:00</time>
+        <h4>Snøfnugg, revespor, og gul snø?</h4>
+        <details>
+          <summary>Les mer om konserten her</summary>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
+            incidunt deleniti dicta, dolores obcaecati error unde quisquam
+            dolorem ipsam veniam consequatur quae sequi recusandae at? Obcaecati
+            quae neque, libero maiores fugit incidunt pariatur consequatur aut.
+            Sit quae neque commodi blanditiis, pariatur aliquid voluptates.
+            Distinctio, repudiandae quae? Quam mollitia corporis rem.
+          </p>
+        </details>
+      </li>
+      <li>
+        <img
+          src="https://source.unsplash.com/random?hard work"
+          alt="Bilde fra unsplash"
+        />
+        <h3>Travelt er det når man trevler</h3>
+        <span class="venue">Bærum Kulturhus</span>
+        <time datetime="08-20T20:00">21. aug – kl. 16:00</time>
+        <h4>En arbeiderkveld for arbeidsfolk?</h4>
+        <details>
+          <summary>Les mer om konserten her</summary>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
+            incidunt deleniti dicta, dolores obcaecati error unde quisquam
+            dolorem ipsam veniam consequatur quae sequi recusandae at? Obcaecati
+            quae neque, libero maiores fugit incidunt pariatur consequatur aut.
+            Sit quae neque commodi blanditiis, pariatur aliquid voluptates.
+            Distinctio, repudiandae quae? Quam mollitia corporis rem.
+          </p>
+        </details>
+      </li>
+      <li>
+        <img
+          src="https://source.unsplash.com/random?exhale"
+          alt="Bilde fra unsplash"
+        />
+        <h3>Et siste innpust før utpustet</h3>
+        <span class="venue">Kalkmølla</span>
+        <time datetime="08-20T20:00">21. aug – kl. 20:00</time>
+        <h4>Endelig kan vi slappe av og ta oss tid.</h4>
+        <details>
+          <summary>Les mer om konserten her</summary>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
+            incidunt deleniti dicta, dolores obcaecati error unde quisquam
+            dolorem ipsam veniam consequatur quae sequi recusandae at? Obcaecati
+            quae neque, libero maiores fugit incidunt pariatur consequatur aut.
+            Sit quae neque commodi blanditiis, pariatur aliquid voluptates.
+            Distinctio, repudiandae quae? Quam mollitia corporis rem.
+          </p>
+        </details>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -31,16 +31,21 @@
       </search>
 
       <label for="liste">Filtrer i arrangement</label>
-      <select name="arrangement" id="liste">
+      <select
+        name="arrangement"
+        id="liste"
+        –="if option contains my innerHTML
+        show <li/> in #arrangement"
+      >
         <option value="alle">Alle arrangement</option>
-        <hr>
+        <hr />
         <option value="kulturhus">Bærum Kulturhus</option>
         <option value="teater">Sandvika Teater</option>
         <option value="kunstsenter">Henie Onstad Kunstsenter</option>
         <option value="kalkmølla">Kalkmølla</option>
-        <hr>
-        <option value="aug20">20. august</option>
-        <option value="aug21">21. august</option>
+        <hr />
+        <option value="aug20">20. aug</option>
+        <option value="aug21">21. aug</option>
       </select>
     </section>
 

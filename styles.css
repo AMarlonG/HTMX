@@ -2,7 +2,15 @@ body {
   display: grid;
   width: min(120ch, 100% - 4rem);
   margin-inline: auto;
-  place-content: center;
+}
+
+.filtrering {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+input[type='search'] {
+  max-width: fit-content;
 }
 
 ul {
@@ -15,6 +23,7 @@ ul {
   grid-auto-flow: column;
   grid-auto-columns: 27%;
   overflow-x: auto;
+  margin-block-start: 5rem;
 
   li {
     aspect-ratio: 4 / 5;
@@ -32,5 +41,11 @@ ul {
     inline-size: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+  }
+}
+
+details {
+  summary {
+    cursor: pointer;
   }
 }

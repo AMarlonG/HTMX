@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTMX Playground</title>
+    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
     <script src="/htmx.min.js"></script>
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -12,13 +13,36 @@
     <h1>Bærum Jazzfestival</h1>
     <h2>Program</h2>
 
-    <div>Finn ditt arrangement</div>
-    <input
-      type="search"
-      name="search"
-      placeholder="Søk arrangement her ..."
-      class="search"
-    />
+    <section class="filtrering">
+      <search>
+        <label for="search">Søk i arrangement</label>
+        <input
+          type="search"
+          name="search"
+          placeholder="Skriv her ..."
+          id="search"
+          _="on keyup
+         if the event's key is 'Escape'
+           set my value to ''
+           trigger keyup
+         else
+          show <li/> in #arrangement when its innerHTML.toLowerCase() contains my value.toLowerCase()"
+        />
+      </search>
+
+      <label for="liste">Filtrer i arrangement</label>
+      <select name="arrangement" id="liste">
+        <option value="alle">Alle arrangement</option>
+        <hr>
+        <option value="kulturhus">Bærum Kulturhus</option>
+        <option value="teater">Sandvika Teater</option>
+        <option value="kunstsenter">Henie Onstad Kunstsenter</option>
+        <option value="kalkmølla">Kalkmølla</option>
+        <hr>
+        <option value="aug20">20. august</option>
+        <option value="aug21">21. august</option>
+      </select>
+    </section>
 
     <ul class="arrangement" id="arrangement">
       <li>

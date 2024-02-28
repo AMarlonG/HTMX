@@ -20,13 +20,15 @@
           type="search"
           name="search"
           placeholder="Skriv her ..."
+          value="{{request.GET.q}}"
           id="search"
-          _="on keyup
+          _="on keyup wait 200ms
          if the event's key is 'Escape'
            set my value to ''
            trigger keyup
          else
           show <li/> in #arrangement when its innerHTML.toLowerCase() contains my value.toLowerCase()"
+          hx-push-url="/search?q={value}"
         />
       </search>
 
@@ -34,7 +36,7 @@
       <select
         name="arrangement"
         id="liste"
-        –="if option contains my innerHTML
+        –="if option innerHTML contains my innerHTML
         show <li/> in #arrangement"
       >
         <option value="alle">Alle arrangement</option>
